@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    max-width: 1440px;
+    display: grid;
+    padding: 32px 64px;
+    margin: auto;
+    gap: 32px;
+
+}
+
+header,
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.nav-container {
+    max-width: 1312px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.nav-head {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+    color: #101828;
+}
+
+.btnadd {
+    max-width: 143px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #0C39C7;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+}
+
+hr {
+    max-width: 1312px;
+    align-self: center;
+    background-color: #D0D5DD;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1312px;
+    gap: 20px;
+}
+
+.search-bar {
+    width: 578px;
+    padding: 10px 14px;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid #CECECE;
+}
+
+.search-bar,
+:placeholder-shown {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+
+}
+
+input[type="search"] {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+    border-color: #CECECE;
+}
+
+.sort-container {
+    display: flex;
+    max-width: 223px;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-container label {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.07px;
+    text-align: left;
+    color: #09174A;
+    white-space: nowrap;
+
+}
+
+.active-tasks-container {
+    max-width: 1312px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.completed-tasks-container {
+    max-width: 1312px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.completed-tasks-container-head {
+ display: flex;
+ justify-content: space-between;
+}
+
+.completed-tasks-container-head button{
+    border: 1px solid black;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    gap: 21px;
+    flex-direction: column;
+}
+
+
+.active-tasks-container span,
+.completed-tasks-container span {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.94px;
+    text-align: left;
+    color: #8B8B8B;
+
+}
+
+.active-task,
+.completed-tasks {
+    max-width: 1312px;
+    border-radius: 8px;
+    border: 1px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    justify-content: space-between;
+}
+
+.task {
+    display: flex;
+    list-style: none;
+    max-width: 1312px;
+    padding: 24px;
+    gap: 14px;
+    border-radius: 8px;
+    border: 1px solid #CECECE;
+    justify-content: space-between;
+    align-items: self-start;
+
+}
+
+.chk-box {
+    appearance: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.chk-box:checked {
+    background-image: url("../images/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.task-content {
+    max-width: 1136px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-head {
+    display: flex;
+    max-width: 265px;
+    gap: 8px;
+}
+
+span.task-title {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.94px;
+    text-align: left;
+    color: #282829;
+}
+
+.task-head img {
+    width: 11px;
+}
+
+p {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #475467;
+}
+
+.task-cal {
+    display: flex;
+    align-items: center;
+    width: 137px;
+    gap: 8px;
+}
+
+.task-cal img {
+    width: 24px;
+}
+
+span.task-date {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.07px;
+    text-align: justified;
+    color: #667085;
+}
+
+.edit-delete-icons {
+    width: 68px;
+    display: flex;
+    gap: 16px;
+
+}
+
+.form-check {
+    border-radius: 50%;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+}
+
+.btn-edit {
+    background-color: white;
+    border: none;
+
+}
