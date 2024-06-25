@@ -19,9 +19,8 @@
         <div class="nav-container">
             <span class=" nav-head ">My Tasks</span>
             <button type="button" class="btn btnadd btn-primary" data-bs-toggle="modal" data-bs-target="#add-modal">
-                Add Tasks</button>
-
-
+                Add Tasks
+            </button>
         </div>
 
         <span>
@@ -30,7 +29,7 @@
 
         <div class="search-container">
             <div class="input-group rounded search-bar">
-                <input type="search" class="form-control rounded" placeholder="Search by task name " aria-label="Search"
+                <input type="search" id="search-input" class="form-control rounded" placeholder="Search by task name " aria-label="Search"
                     aria-describedby="search-addon" />
                 <span class="input-group-text border-0" id="search-addon">
                     <img src="images/search-icon.svg" alt="search-icon">
@@ -49,22 +48,18 @@
     </header>
     <main>
         <div class="active-tasks-container">
-            <span>Active Tasks</span>
+            <span id="active-head">Active Tasks</span>
             <ul id="active-task" class="active-task">
-
-
 
             </ul>
         </div>
 
-        <div class="completed-tasks-container">
+        <div id="completed-head" class="completed-tasks-container">
             <div class="completed-tasks-container-head">
-                <span>Completed Tasks</span>
+                <span >Completed Tasks</span>
                 <button class=" btn btn-light" id="clear-task-btn">Clear Tasks</button>
             </div>
             <ul id="completed-task" class="completed-task">
-
-
 
             </ul>
         </div>
@@ -127,12 +122,13 @@
 
                             <div class="mb-3">
                                 <label for="task-due-date" class="col-form-label">Due Date *</label>
-                                <input type="date" class="form-control" id="edit-task-due-date" min="24-06-2024" required>
+                                <input type="date" class="form-control" id="edit-task-due-date" min="24-06-2024"
+                                    required>
                             </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-bs-dismiss="modal" onclick="">Close</button>
-                        <button type="submit" class="btn btnadd btn-primary"  data-bs-toggle="modal">Update</button>
+                        <button type="submit" class="btn btnadd btn-primary" data-bs-toggle="modal">Update</button>
                         </form>
                     </div>
                 </div>
@@ -153,7 +149,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                        <button  class="btn btn-danger" data-bs-toggle="modal" id="delete-btn">Delete</button>
+                        <button class="btn btn-danger" data-bs-toggle="modal" id="delete-btn">Delete</button>
                     </div>
                 </div>
             </div>

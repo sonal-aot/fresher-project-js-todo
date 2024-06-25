@@ -136,7 +136,6 @@ function loadTask() {
         activeTaskList.innerHTML = '';
         completedTaskList.innerHTML = '';
 
-        // const mydata = JSON.parse(localStorage.getItem("tasks")) || [];
         mydata.forEach(task => {
             const taskElement = createTaskElement(task);
             if (task.completed) {
@@ -158,7 +157,6 @@ function loadTask() {
         this.reset();
     });
 
-
     renderTasks();
 
     function editTask(taskId) {
@@ -174,11 +172,9 @@ function loadTask() {
         editModal.addEventListener('submit', function (event) {
             event.preventDefault();
 
-
             let edittitle = document.getElementById('edit-task-name').value;
             let editdescription = document.getElementById('edit-task-text').value;
             let editduedate = document.getElementById('edit-task-due-date').value;
-
 
             mydata[taskIndex].title = edittitle;
             mydata[taskIndex].description = editdescription;
@@ -212,5 +208,44 @@ function loadTask() {
         setDataInLocal();
         renderTasks();
     })
+
+
+    // let searchlist = JSON.parse(localStorage.getItem("tasks")) || [];
+    let searchtask = document.getElementById('search-input');
+    searchtask.addEventListener('input', function () {
+        // console.log(this.value);
+        searchtasklist(this.value);
+
+    });
+
+
+    function searchtasklist(searchTerm) {
+        let activeHead = document.getElementById("active-head");
+        let completedHead = document.getElementById("completed-head");
+
+        const searchResults = mydata.filter(task =>
+            task.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        const activeTaskList = document.getElementById('active-task');
+        activeTaskList.innerHTML = '';
+        activeHead.innerHTML = "Search Results";
+        completedHead.style.display = "none";
+        searchResults.forEach(task => activeTaskList.appendChild(createTaskElement(task)));
+
+    }
+
+    // function sortTasks(tasks, criteria) {
+    //     switch (criteria) {
+    //         case "newest":
+    //             return tasks.sort((a, b) => b.id - a.id); // Newest First
+    //         case "oldest":
+    //             return tasks.sort((a, b) => a.id - b.id); // Oldest First
+    //         default:
+    //             return tasks;
+    //     }
+    // }
+
+
 }
 
