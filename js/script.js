@@ -1,5 +1,7 @@
 
+
 function loadTask() {
+    let mydata = JSON.parse(localStorage.getItem("tasks")) || [];
 
     function createTask(title, description, duedate) {
         let mydata = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -176,7 +178,6 @@ function loadTask() {
 
     }
 
-
     let taskform = document.querySelector('#task-form');
     taskform.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -222,24 +223,17 @@ function loadTask() {
 
 
     function deleteTask(taskId) {
-        let deleteModal = document.querySelector('#deleteModal');
-        let mydata = JSON.parse(localStorage.getItem("tasks")) || [];
-    
-        deleteModal.addEventListener('submit', function(event) {
-            
-            
-            event.preventDefault();
-            mydata = mydata.filter(task => task.id !== taskId);
+
+        let deletebtn = document.getElementById("deleteBtn");
+        deletebtn.addEventListener("click", function(){
+            mydata = mydata.filter((t)=> t.id !== taskId);
             localStorage.setItem('tasks', JSON.stringify(mydata));
-    
-            
             renderTasks();
-        }, { once: true }); 
+        })
     }
     
 
 
 }
-
 
 
