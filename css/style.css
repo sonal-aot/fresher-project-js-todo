@@ -175,7 +175,7 @@ ul {
 
 .chk-box {
     appearance: none;
-    border: 1px solid black;
+    border: 1px solid #CECECE;
     border-radius: 50%;
     width: 30px;
     height: 30px;
