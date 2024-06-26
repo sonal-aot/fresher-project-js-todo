@@ -121,7 +121,7 @@ function loadTask() {
     }
 
     function updateTaskStatus(taskId, completed) {
-        // let mydata = JSON.parse(localStorage.getItem("tasks")) || [];
+
         const taskIndex = mydata.findIndex(task => task.id === taskId);
         if (taskIndex !== -1) {
             mydata[taskIndex].completed = completed;
@@ -161,7 +161,7 @@ function loadTask() {
 
     function editTask(taskId) {
         let editModal = document.querySelector('#edit-modal');
-        // let mydata = JSON.parse(localStorage.getItem("tasks")) || [];
+
         const taskIndex = mydata.findIndex(task => task.id === taskId);
 
         document.getElementById('edit-task-name').value = mydata[taskIndex].title;
@@ -210,10 +210,10 @@ function loadTask() {
     })
 
 
-    // let searchlist = JSON.parse(localStorage.getItem("tasks")) || [];
+
     let searchtask = document.getElementById('search-input');
     searchtask.addEventListener('input', function () {
-        // console.log(this.value);
+
         searchtasklist(this.value);
 
     });
@@ -235,16 +235,32 @@ function loadTask() {
 
     }
 
-    // function sortTasks(tasks, criteria) {
-    //     switch (criteria) {
-    //         case "newest":
-    //             return tasks.sort((a, b) => b.id - a.id); // Newest First
-    //         case "oldest":
-    //             return tasks.sort((a, b) => a.id - b.id); // Oldest First
-    //         default:
-    //             return tasks;
-    //     }
-    // }
+
+    const sortSelect = document.getElementById('sort');
+    sortSelect.addEventListener('change', function () {
+
+        const activeTaskList = document.getElementById('active-task');
+
+
+        if (sortSelect.value === 'Newest First') {
+            let sortlist = mydata.sort((a, b) => b.id - a.id);
+            console.log(sortlist)
+            activeTaskList.innerHTML = '';
+            sortlist.forEach(task => activeTaskList.appendChild(createTaskElement(task)));
+
+
+
+        } else if (sortSelect.value === 'Oldest First') {
+            let sortlist = mydata.sort((a, b) => a.id - b.id);
+            console.log(mydata.sort((a, b) => a.id - b.id))
+            activeTaskList.innerHTML = '';
+            sortlist.forEach(task => activeTaskList.appendChild(createTaskElement(task)));
+
+        }
+    });
+
+
+
 
 
 }

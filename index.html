@@ -29,8 +29,8 @@
 
         <div class="search-container">
             <div class="input-group rounded search-bar">
-                <input type="search" id="search-input" class="form-control rounded" placeholder="Search by task name " aria-label="Search"
-                    aria-describedby="search-addon" />
+                <input type="search" id="search-input" class="form-control rounded" placeholder="Search by task name "
+                    aria-label="Search" aria-describedby="search-addon" />
                 <span class="input-group-text border-0" id="search-addon">
                     <img src="images/search-icon.svg" alt="search-icon">
                 </span>
@@ -39,14 +39,17 @@
             <div class="sort-container">
                 <label>Sort by :</label>
                 <select class="form-select sort-btn" aria-label="Default select example" id="sort">
-                    <option selected value="1">Newest First</option>
-                    <option value="2">Oldest First</option>
+                    <option selected value="Newest First">Newest First</option>
+                    <option value="Oldest First">Oldest First</option>
                 </select>
             </div>
         </div>
 
     </header>
     <main>
+
+        <!-- Active Task -->
+
         <div class="active-tasks-container">
             <span id="active-head">Active Tasks</span>
             <ul id="active-task" class="active-task">
@@ -54,9 +57,11 @@
             </ul>
         </div>
 
+        <!-- Completed Task -->
+
         <div id="completed-head" class="completed-tasks-container">
             <div class="completed-tasks-container-head">
-                <span >Completed Tasks</span>
+                <span>Completed Tasks</span>
                 <button class=" btn btn-light" id="clear-task-btn">Clear Tasks</button>
             </div>
             <ul id="completed-task" class="completed-task">
