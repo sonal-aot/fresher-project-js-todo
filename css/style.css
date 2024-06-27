@@ -121,12 +121,13 @@ input[type="search"] {
 }
 
 .completed-tasks-container-head {
- display: flex;
- justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-.completed-tasks-container-head button{
-    border: 1px solid black;
+.completed-tasks-container-head button {
+    border: 1px solid #0C39C7;
+    color: #0C39C7;
 }
 
 ul {
@@ -246,7 +247,6 @@ span.task-date {
 }
 
 .edit-delete-icons {
-    width: 68px;
     display: flex;
     gap: 16px;
 
@@ -272,3 +272,24 @@ li {
     border: none;
 
 }
+
+/* option.custom-option {
+    display: flex;
+    max-width: 160px;
+    width: 100%;
+    padding: 6px;
+    gap: 10px;
+    border-radius: 4px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #414141;
+}
+
+option.custom-option:active{
+    background-color: #0C39C7;
+    color: #fff;
+} */
+
