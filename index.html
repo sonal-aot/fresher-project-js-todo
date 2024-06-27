@@ -85,7 +85,10 @@
                                 <input type="text" class="form-control" id="task-name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="task-text" class="col-form-label">Description </label>
+                                <label for="task-text" class="col-form-label">Description <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.33325 11H7.66658V9.66668H6.33325V11ZM6.99992 0.333344C3.31992 0.333344 0.333252 3.32001 0.333252 7.00001C0.333252 10.68 3.31992 13.6667 6.99992 13.6667C10.6799 13.6667 13.6666 10.68 13.6666 7.00001C13.6666 3.32001 10.6799 0.333344 6.99992 0.333344ZM6.99992 12.3333C4.05992 12.3333 1.66659 9.94001 1.66659 7.00001C1.66659 4.06001 4.05992 1.66668 6.99992 1.66668C9.93992 1.66668 12.3333 4.06001 12.3333 7.00001C12.3333 9.94001 9.93992 12.3333 6.99992 12.3333ZM6.99992 3.00001C5.52659 3.00001 4.33325 4.19334 4.33325 5.66668H5.66658C5.66658 4.93334 6.26658 4.33334 6.99992 4.33334C7.73325 4.33334 8.33325 4.93334 8.33325 5.66668C8.33325 7.00001 6.33325 6.83334 6.33325 9.00001H7.66658C7.66658 7.50001 9.66658 7.33334 9.66658 5.66668C9.66658 4.19334 8.47325 3.00001 6.99992 3.00001Z" fill="#98A2B3"/>
+                                    </svg>
+                                    </label>
                                 <textarea class="form-control" id="task-text"></textarea>
                             </div>
 
@@ -121,7 +124,10 @@
                                 <input type="text" class="form-control" id="edit-task-name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="task-text" class="col-form-label">Description </label>
+                                <label for="task-text" class="col-form-label">Description <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.33325 11H7.66658V9.66668H6.33325V11ZM6.99992 0.333344C3.31992 0.333344 0.333252 3.32001 0.333252 7.00001C0.333252 10.68 3.31992 13.6667 6.99992 13.6667C10.6799 13.6667 13.6666 10.68 13.6666 7.00001C13.6666 3.32001 10.6799 0.333344 6.99992 0.333344ZM6.99992 12.3333C4.05992 12.3333 1.66659 9.94001 1.66659 7.00001C1.66659 4.06001 4.05992 1.66668 6.99992 1.66668C9.93992 1.66668 12.3333 4.06001 12.3333 7.00001C12.3333 9.94001 9.93992 12.3333 6.99992 12.3333ZM6.99992 3.00001C5.52659 3.00001 4.33325 4.19334 4.33325 5.66668H5.66658C5.66658 4.93334 6.26658 4.33334 6.99992 4.33334C7.73325 4.33334 8.33325 4.93334 8.33325 5.66668C8.33325 7.00001 6.33325 6.83334 6.33325 9.00001H7.66658C7.66658 7.50001 9.66658 7.33334 9.66658 5.66668C9.66658 4.19334 8.47325 3.00001 6.99992 3.00001Z" fill="#98A2B3"/>
+                                    </svg>
+                                     </label>
                                 <textarea class="form-control" id="edit-task-text"></textarea>
                             </div>
 
@@ -146,13 +152,13 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Delete Task ?</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <p>Are you sure you want to delete this task?</p>
+                    <div class="modal-body delete-body">
+                        <h5 class="modal-title" >Delete Task ?</h5>
+                        <p >Are you sure you want to delete this task?</p>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer delete-footer">
                         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
                         <button class="btn btn-danger" data-bs-toggle="modal" id="delete-btn">Delete</button>
                     </div>
